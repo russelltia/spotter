@@ -40,7 +40,7 @@ app.get('/listing', (req, res) => {
         title: `${spot.title}`,    
     });
 });
-let port = prcoess.env.PORT || 7000;
+let port = process.env.PORT || 7000;
 const server = app.listen(port, () => {
     console.log(`Express running → PORT ${server.address().port}`);
 });
