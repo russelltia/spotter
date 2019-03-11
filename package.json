@@ -4,7 +4,8 @@
   "description": "Nodejs Assignment built with Node, Express and Pug",
   "main": "server.js",
   "scripts": {
-    "start": "npx pm2 start server.js --watch"
+    "start": "npx pm2 start server.js --watch",
+    "dev": "nodemon server.js"
   },
   "author": "Russell Tia",
   "dependencies": {

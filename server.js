@@ -1,8 +1,6 @@
 const express = require('express');
 
-const people = require('./people.json');
-
-const listing = require('./listing.json');
+const listings = require('./listings.json');
 
 const app = express();
 
@@ -16,15 +14,15 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     res.render('index', { 
         title: 'Spotter',
-        people: people.profiles
+        spots: listings.spots
     });
 });
 
-app.get('/profile', (req, res) => {
-  const person = people.profiles.find(p => p.id === req.query.id);
-  res.render('profile', {
-    title: `About ${person.firstname} ${person.lastname}`,
-    person,
+app.get('/spot', (req, res) => {
+  const spot = listings.spots.find(p => p.id === req.query.id);
+  res.render('listing', {
+    title: `About ${spot.firstname} ${spot.lastname}`,
+    spot,
   });
 });
 
@@ -36,7 +34,7 @@ app.get('/', (req, res) => {
 
 app.get('/listing', (req, res) => {
     const listing = listing.spots.find(p => p.id === req.query.id);
-    res.render('profile', {
+    res.render('listing', {
         title: `${spot.title}`,    
     });
 });

@@ -86,7 +86,7 @@ body {
 
 /* Profile Card */
 
-.person {
+.spot {
     text-align: left;
     width: 350px;
     height: 450px;
@@ -95,15 +95,15 @@ body {
     box-shadow: 3px 3px rgba(185, 185, 185, 0.16);
 }
 
-.person:hover {
+.spot:hover {
     transform: scale(1.08);
 }
 
-.person > * {
+.spot > * {
     margin-bottom: 5px;
 }
 
-.person-image {
+.spot-image {
     width: 100%;
     height: 300px;
 }

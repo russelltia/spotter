@@ -8,61 +8,61 @@ block content
 
   div.container
   
-    each person in people
+    each spot in spots
     
-      div.person
+      div.spot
       
-        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
         
         no-repeat; background-size: cover;`)
         
-        h3.person-name
-          | #{person.firstname} 
+        h3.spot-name
+          | #{spot.firstname} 
           
-        p.person-name
-          | #{person.lastname}
+        p.spot-name
+          | #{spot.lastname}
           
-        a(href=`/profile?id=${person.id}`)
+        a(href=`/spot?id=${spot.id}`)
           | View Spot
 
   h2.heading Recently Viewed
   
   div.container
   
-    each person in people
+    each spot in spots
     
-      div.person
+      div.spot
       
-        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
         
         no-repeat; background-size: cover;`)
         
-        h3.person-name
-          | #{person.firstname} 
+        h3.spot-name
+          | #{spot.firstname} 
           
-        p.person-name 
-          | #{person.lastname}
+        p.spot-name 
+          | #{spot.lastname}
         <br /><br /><br />  
-        a(href=`/profile?id=${person.id}`)
+        a(href=`/spot?id=${spot.id}`)
           | View Spot
 
   h2.heading Nearby
   
   div.container
   
-    each person in people
+    each spot in spots
     
-      div.person
+      div.spot
       
-        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
         
         no-repeat; background-size: cover;`)
         
-        h3.person-name
-          | #{person.firstname} 
+        h3.spot-name
+          | #{spot.firstname} 
           
-        p.person-name
-          | #{person.lastname}
+        p.spot-name
+          | #{spot.lastname}
           
-        a(href=`/profile?id=${person.id}`)
+        a(href=`/spot?id=${spot.id}`)
           | View Spot
