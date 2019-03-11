@@ -3,17 +3,17 @@ extends default
 block header
 
 block content
-  div.spot
-    div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
+  div.spotPage
+    div.spotPage-image(style=`background: url('/images/${spot.imgSrc}') top center
     no-repeat; background-size: cover;`)
-    div.spot-details
-      h1.spot-name
-        | #{spot.firstname} 
-      h3.spot-price
-        | #{spot.lastname}
-      h3.spot-tagline
-        | #{spot.tagline}
-      p.spot-bio
-        | #{spot.bio}
-      a.button.button-twitter(href=`${spot.twitter}`)
+    div.spotPage-details
+      h1.spotPage-name
+        | #{spot.title} 
+      h3.spotPage-location
+        | #{spot.location}
+      h3.spotPage-price
+        | #{spot.price}
+      p.spotPage-description
+        | #{spot.description}
+      a.button.button-contact(href=`${spot.contact}`)
         | Contact Owner

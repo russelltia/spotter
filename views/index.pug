@@ -17,52 +17,14 @@ block content
         no-repeat; background-size: cover;`)
         
         h3.spot-name
-          | #{spot.firstname} 
+          | #{spot.title} 
           
         p.spot-name
-          | #{spot.lastname}
-          
+          | #{spot.location}
+       
+        h4.spot-price
+          | #{spot.price}
+       
         a(href=`/spot?id=${spot.id}`)
           | View Spot
 
-  h2.heading Recently Viewed
-  
-  div.container
-  
-    each spot in spots
-    
-      div.spot
-      
-        div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
-        
-        no-repeat; background-size: cover;`)
-        
-        h3.spot-name
-          | #{spot.firstname} 
-          
-        p.spot-name 
-          | #{spot.lastname}
-        <br /><br /><br />  
-        a(href=`/spot?id=${spot.id}`)
-          | View Spot
-
-  h2.heading Nearby
-  
-  div.container
-  
-    each spot in spots
-    
-      div.spot
-      
-        div.spot-image(style=`background: url('/images/${spot.imgSrc}') top center
-        
-        no-repeat; background-size: cover;`)
-        
-        h3.spot-name
-          | #{spot.firstname} 
-          
-        p.spot-name
-          | #{spot.lastname}
-          
-        a(href=`/spot?id=${spot.id}`)
-          | View Spot

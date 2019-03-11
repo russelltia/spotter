@@ -1,5 +1,3 @@
-// omg it works
-
 const express = require('express');
 
 const listings = require('./listings.json');
@@ -23,16 +21,11 @@ app.get('/', (req, res) => {
 app.get('/spot', (req, res) => {
   const spot = listings.spots.find(p => p.id === req.query.id);
   res.render('listing', {
-    title: `About ${spot.firstname} ${spot.lastname}`,
+    title: `About ${spot.title} ${spot.location}`,
     spot,
   });
 });
 
-app.get('/', (req, res) => {
-    res.render('index', {
-        listing: listing.spots    
-    });
-});
 
 app.get('/listing', (req, res) => {
     const listing = listing.spots.find(p => p.id === req.query.id);
@@ -40,6 +33,7 @@ app.get('/listing', (req, res) => {
         title: `${spot.title}`,    
     });
 });
+
 let port = process.env.PORT || 7000;
 const server = app.listen(port, () => {
     console.log(`Express running → PORT ${server.address().port}`);
