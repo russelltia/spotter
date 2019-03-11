@@ -1,0 +1,68 @@
+extends default
+
+block content
+
+  p.intro Find a Spot to rent without the headache of finding a spot to rent
+
+  h2.heading New Listings
+
+  div.container
+  
+    each person in people
+    
+      div.person
+      
+        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        
+        no-repeat; background-size: cover;`)
+        
+        h3.person-name
+          | #{person.firstname} 
+          
+        p.person-name
+          | #{person.lastname}
+          
+        a(href=`/profile?id=${person.id}`)
+          | View Spot
+
+  h2.heading Recently Viewed
+  
+  div.container
+  
+    each person in people
+    
+      div.person
+      
+        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        
+        no-repeat; background-size: cover;`)
+        
+        h3.person-name
+          | #{person.firstname} 
+          
+        p.person-name 
+          | #{person.lastname}
+        <br /><br /><br />  
+        a(href=`/profile?id=${person.id}`)
+          | View Spot
+
+  h2.heading Nearby
+  
+  div.container
+  
+    each person in people
+    
+      div.person
+      
+        div.person-image(style=`background: url('/images/${person.imgSrc}') top center
+        
+        no-repeat; background-size: cover;`)
+        
+        h3.person-name
+          | #{person.firstname} 
+          
+        p.person-name
+          | #{person.lastname}
+          
+        a(href=`/profile?id=${person.id}`)
+          | View Spot
